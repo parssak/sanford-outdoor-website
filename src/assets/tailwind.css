@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 
@@ -8,23 +9,27 @@
 
 /* #region - Typography -  */
 * {
-  font-family: Inter;
+  font-family: Nunito;
 }
 
-html, body {
+html,
+body {
   @apply bg-dark;
 }
 
 h1 {
-  @apply text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl;
+  @apply text-4xl font-bold tracking-wide text-white sm:text-5xl md:text-6xl;
+  font-family: Jost;
 }
 
 h2 {
-  @apply text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-6 md:mb-8;
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 md:mb-8 tracking-wide;
+  font-family: Jost;
 }
 
 h3 {
-  @apply text-2xl md:text-3xl font-extrabold tracking-tight text-white mb-4 md:mb-6;
+  @apply text-2xl md:text-3xl text-white mb-4 md:mb-6;
+  font-family: Jost;
 }
 
 .footer-heading {
@@ -36,7 +41,7 @@ h4 {
 }
 
 p {
-  @apply text-base text-gray-500 leading-relaxed;
+  @apply text-grey leading-relaxed text-lg tracking-normal font-light;
 }
 
 ul:not(.unstyled) {
@@ -56,11 +61,9 @@ ul:not(.unstyled) li::before {
   margin-left: -1em;
 }
 
-
 /* #endregion - Typography -  */
 
 /* #region - Inputs - */
-
 
 a.with-underline {
   @apply relative transition w-max hover:text-accent;
@@ -86,11 +89,10 @@ select {
   @apply border-gray-400 focus:border-accent text-lg py-3 px-4 block w-full rounded-md;
 }
 
-
 .btn {
-  @apply w-max inline-flex items-center border border-transparent font-medium shadow-sm transition
+  @apply w-max inline-flex items-center border border-transparent shadow-sm transition
         text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-2 
-        focus:ring-offset-2 focus:ring-accent;
+        focus:ring-offset-2 focus:ring-accent uppercase tracking-widest font-light;
 }
 
 .btn-dark {
@@ -118,7 +120,7 @@ select {
 }
 
 .btn-xl {
-  @apply px-4 py-2 text-base md:px-6 md:py-3 md:text-lg rounded-md;
+  @apply px-4 py-2 text-sm md:px-6 md:py-3 rounded-md;
 }
 
 /* #endregion - Inputs -  */
@@ -142,7 +144,7 @@ select {
 }
 
 .nav-item-mobile {
-  @apply  mb-1
+  @apply mb-1
                     p-2
                     flex
                     items-center
@@ -185,7 +187,6 @@ nav .router-link-active:not(.no-show-active):not(.nav-item-mobile)::before {
   transform: translateY(2px);
 }
 
-
 :root {
   --nav-gap: 4.5rem;
 }
@@ -193,7 +194,6 @@ nav .router-link-active:not(.no-show-active):not(.nav-item-mobile)::before {
 .nav-gap {
   margin-bottom: var(--nav-gap);
 }
-
 
 /* #endregion - Nav - */
 
@@ -217,7 +217,6 @@ nav .router-link-active:not(.no-show-active):not(.nav-item-mobile)::before {
 .todo::before {
   content: "TODO: ";
 }
-
 
 /* #endregion-  */
 
@@ -255,4 +254,12 @@ input.unstyled[type="number"] {
 
 /* #endregion */
 
+.support-text {
+  @apply text-base font-medium text-accent mb-2;
+  font-family: Nunito;
+}
 
+.support-text-white {
+  @apply text-base font-medium text-white mb-2;
+  font-family: Nunito;
+}

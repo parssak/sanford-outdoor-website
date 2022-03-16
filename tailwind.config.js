@@ -6,10 +6,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+        sans: ["Nunito", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        dark: '#161616',
+        dark: "#161616",
         accent: {
           darkest: "#63656A",
           dark: "#90a4ae",
@@ -19,6 +19,7 @@ module.exports = {
           light_hover: "#efefef",
           lightest: "#fafafa",
         },
+        grey: '#ADACAC',
       },
     },
   },

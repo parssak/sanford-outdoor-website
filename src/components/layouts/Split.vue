@@ -2,12 +2,13 @@
   <Container :class="dark && 'bg-accent-dark'">
     <div class="grid gap-x-8 gap-y-12 lg:grid-cols-2">
       <section :class="flip && `lg:order-1`" class="lg:py-12">
-        <h2 :class="dark && 'text-white'">{{ title }}</h2>
-        <p :class="dark && 'text-white'"><span v-html="description"></span></p>
+        <h3 class="support-text" v-if="supportText.length > 0">{{ supportText }}</h3>
+        <h2 :class="dark && 'text-white'" v-html="title"></h2>
+        <p class="text-grey"><span v-html="description"></span></p>
         <slot name="extra-content"></slot>
       </section>
       <section>
-        <div class="split-img-wrapper w-full h-full rounded-md overflow-hidden">
+        <div class="split-img-wrapper w-full h-full rounded-xl overflow-hidden">
           <slot></slot>
         </div>
       </section>
@@ -36,6 +37,10 @@ export default {
     dark: {
       type: Boolean,
       default: false,
+    },
+    supportText: {
+      type: String,
+      default: "",
     },
   },
 };

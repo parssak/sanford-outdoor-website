@@ -2,20 +2,13 @@
   <main class="relative">
     <div class="max-w-7xl mx-auto sm:p-6">
       <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
-        <div class="absolute inset-0 image-wrapper">
+        <div class="absolute inset-0">
           <img src="@/assets/hero.png" alt="" class="w-full h-full object-cover" />
-          <!-- <div class="absolute inset-0 bg-accent mix-blend-multiply" /> -->
-          <!-- <div class="absolute inset-0 bg-black opacity-50" /> -->
         </div>
         <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-          <h1 class="text-center text-4xl sm:text-5xl lg:text-6xl">
+          <div class="text-center">
             <slot name="title"></slot>
-          </h1>
-          <!-- <div class="mt-20 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
-            <div class="grid place-items-center">
-              <Button path="/contact" theme="light">Contact Us</Button>
-            </div>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
@@ -28,11 +21,3 @@ export default {
   components: { Button },
 };
 </script>
-
-<style>
-.image-wrapper img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-</style>

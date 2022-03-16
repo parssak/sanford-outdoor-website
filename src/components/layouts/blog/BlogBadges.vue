@@ -1,10 +1,14 @@
 <template>
   <Container>
     <div class="relative">
-      <div class="prose prose-lg">
-        <h2>
-          {{ title }}
-        </h2>
+      <div>
+        <h3 v-if="supportText?.length > 0" class="support-text">{{ supportText }}</h3>
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="mb-0">
+            {{ title }}
+          </h2>
+          <router-link class="btn btn-xl h-max" to="/blog"> View All Posts </router-link>
+        </div>
         <p>
           {{ description }}
         </p>
@@ -16,7 +20,7 @@
               <span
                 :class="[
                   post.category.color,
-                  'inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium',
+                  'inline-flex items-center px-3 py-0.5 rounded text-sm ',
                 ]"
               >
                 {{ post.category.name }}
@@ -24,22 +28,18 @@
             </a>
           </div>
           <a :href="post.href" class="block mt-4">
-            <p class="text-xl font-semibold text-gray-900">
+            <p class="text-xl font-semibold text-white">
               {{ post.title }}
             </p>
-            <p class="mt-3 text-base text-gray-500">
+            <p class="mt-3 text-base text-grey">
               {{ post.description }}
             </p>
           </a>
-          <div class="mt-6 flex items-center">
+          <!-- <div class="mt-6 flex items-center">
             <div class="flex-shrink-0">
               <a :href="post.author.href">
                 <span class="sr-only">{{ post.author.name }}</span>
-                <img
-                  class="h-10 w-10 rounded-full"
-                  :src="post.author.imageUrl"
-                  alt=""
-                />
+                <img class="h-10 w-10 rounded-full" :src="post.author.imageUrl" alt="" />
               </a>
             </div>
             <div class="ml-3">
@@ -56,7 +56,7 @@
                 <span> {{ post.readingTime }} read </span>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -67,12 +67,12 @@
 import Container from "@/components/layouts/Container";
 const defaultPosts = [
   {
-    title: "Boost your conversion rate",
+    title: "Top 100 Billboard Placements",
     href: "#",
     category: {
       name: "Article",
       href: "#",
-      color: "bg-indigo-100 text-indigo-800",
+      color: "bg-accent text-white",
     },
     description:
       "Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.",
@@ -87,9 +87,9 @@ const defaultPosts = [
     readingTime: "6 min",
   },
   {
-    title: "How to use search engine optimization to drive sales",
+    title: "Top 100 Billboard Placements",
     href: "#",
-    category: { name: "Video", href: "#", color: "bg-pink-100 text-pink-800" },
+    category: { name: "Video", href: "#", color: "bg-accent text-white" },
     description:
       "Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.",
     date: "Mar 10, 2020",
@@ -103,12 +103,12 @@ const defaultPosts = [
     readingTime: "4 min",
   },
   {
-    title: "Improve your customer experience",
+    title: "Top 100 Billboard Placements",
     href: "#",
     category: {
       name: "Case Study",
       href: "#",
-      color: "bg-green-100 text-green-800",
+      color: "bg-accent text-white",
     },
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab iure iusto fugiat commodi sequi.",
@@ -141,6 +141,10 @@ export default {
       type: String,
       default:
         "Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.",
+    },
+    supportText: {
+      type: String,
+      default: "",
     },
   },
 };

@@ -2,15 +2,17 @@
   <!-- HeroImageCard -->
   <HeroImageCard>
     <template v-slot:title>
-      <h3>Sanford Outdoor</h3>
-      <h1>Taking Your Advertising To New Heights</h1>
-      <p>
-        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
-        Elit sunt amet fugiat veniam occaecat fugiat aliqua.
-      </p>
-      <div class="flex space-x-3 mt-8">
-        <button class="btn btn-xl">View Boards</button>
-        <button class="btn btn-xl">Get in Touch</button>
+      <div class="max-w-3xl mx-auto flex flex-col items-center">
+        <h3 class="text-base font-medium text-accent mb-4">Sanford Outdoor</h3>
+        <h1>Taking Your Advertising To New Heights</h1>
+        <p class="tracking-normal font-normal text-white mt-8">
+          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
+          Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+        </p>
+        <div class="flex space-x-4 mt-10">
+          <button class="btn btn-xl">View Boards</button>
+          <button class="btn btn-xl btn-light">Get in Touch</button>
+        </div>
       </div>
     </template>
   </HeroImageCard>

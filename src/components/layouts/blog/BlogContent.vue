@@ -7,45 +7,57 @@
         <img :src="post.author.imageUrl" alt="" />
       </div>
       <div>
-        <p class="font-medium text-sm text-black">{{ post.author.name }}</p>
+        <p class="font-medium text-sm">{{ post.author.name }}</p>
         <p class="text-sm">
-          {{ post.date }}<span class="mx-1">&middot;</span
-          >{{ post.readingTime }}
+          {{ post.date }}<span class="mx-1">&middot;</span>{{ post.readingTime }}
         </p>
       </div>
     </div>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aut
-      molestias ipsa nesciunt dicta voluptate, vel explicabo velit quibusdam
-      fugiat, consequuntur quos nam porro non, molestiae dolor perspiciatis! Ab
-      hic mollitia, perferendis quas officia possimus beatae? Corrupti quaerat
-      dolore vitae obcaecati inventore dolores quo sequi facere quasi cum quas,
-      excepturi tenetur laboriosam dolorem cupiditate reprehenderit laborum,
-      nostrum explicabo molestias nesciunt! Quam, accusamus. Ad itaque corrupti
-      et. Neque vel molestias recusandae totam, quia, repudiandae iure sint enim
-      perferendis officiis quaerat reiciendis id reprehenderit voluptatem.
-      Fugiat enim id culpa impedit consequatur voluptate iste amet! Commodi
-      facilis tempora laudantium molestias voluptates labore in!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aut molestias ipsa
+      nesciunt dicta voluptate, vel explicabo velit quibusdam fugiat, consequuntur quos nam porro
+      non, molestiae dolor perspiciatis! Ab hic mollitia, perferendis quas officia possimus beatae?
+      Corrupti quaerat dolore vitae obcaecati inventore dolores quo sequi facere quasi cum quas,
+      excepturi tenetur laboriosam dolorem cupiditate reprehenderit laborum, nostrum explicabo
+      molestias nesciunt! Quam, accusamus. Ad itaque corrupti et. Neque vel molestias recusandae
+      totam, quia, repudiandae iure sint enim perferendis officiis quaerat reiciendis id
+      reprehenderit voluptatem. Fugiat enim id culpa impedit consequatur voluptate iste amet!
+      Commodi facilis tempora laudantium molestias voluptates labore in!
       <br /><br />
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aut
-      molestias ipsa nesciunt dicta voluptate, vel explicabo velit quibusdam
-      fugiat, consequuntur quos nam porro non, molestiae dolor perspiciatis! Ab
-      hic mollitia, perferendis quas officia possimus beatae? Corrupti quaerat
-      dolore vitae obcaecati inventore dolores quo sequi facere quasi cum quas,
-      excepturi tenetur laboriosam dolorem cupiditate reprehenderit laborum,
-      nostrum explicabo molestias nesciunt! Quam, accusamus. Ad itaque corrupti
-      et. Neque vel molestias recusandae totam, quia, repudiandae iure sint enim
-      perferendis officiis quaerat reiciendis id reprehenderit voluptatem.
-      Fugiat enim id culpa impedit consequatur voluptate iste amet! Commodi
-      facilis tempora laudantium molestias voluptates labore in!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aut molestias ipsa
+      nesciunt dicta voluptate, vel explicabo velit quibusdam fugiat, consequuntur quos nam porro
+      non, molestiae dolor perspiciatis! Ab hic mollitia, perferendis quas officia possimus beatae?
+      Corrupti quaerat dolore vitae obcaecati inventore dolores quo sequi facere quasi cum quas,
+      excepturi tenetur laboriosam dolorem cupiditate reprehenderit laborum, nostrum explicabo
+      molestias nesciunt! Quam, accusamus. Ad itaque corrupti et. Neque vel molestias recusandae
+      totam, quia, repudiandae iure sint enim perferendis officiis quaerat reiciendis id
+      reprehenderit voluptatem. Fugiat enim id culpa impedit consequatur voluptate iste amet!
+      Commodi facilis tempora laudantium molestias voluptates labore in!
     </p>
+    <div class="flex items-center justify-between text-grey mt-12">
+      <router-link
+        to="#"
+        class="uppercase tracking-wider text-sm flex items-center hover:text-accent"
+      >
+        <ArrowLeftIcon class="w-4 h-4 mr-2" />
+        PREVIOUS
+      </router-link>
+      <router-link
+        to="#"
+        class="uppercase tracking-wider text-sm flex items-center hover:text-accent"
+      >
+        NEXT
+        <ArrowRightIcon class="w-4 h-4 ml-2" />
+      </router-link>
+    </div>
   </Container>
 </template>
 
 <script>
 import Container from "@/components/layouts/Container.vue";
+import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/vue/outline";
 const defaultPost = {
-  title: "Boost your conversion rate",
+  title: "Blog Title Headline",
   href: "/blog/details",
   category: {
     name: "Article",
@@ -65,7 +77,7 @@ const defaultPost = {
   readingTime: "6 min",
 };
 export default {
-  components: { Container },
+  components: { Container, ArrowRightIcon, ArrowLeftIcon },
   props: {
     post: {
       type: Object,

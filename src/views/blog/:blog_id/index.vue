@@ -1,5 +1,4 @@
 <template>
-  <Header title="blog/:blog_id" />
   <BlogContent />
 </template>
 

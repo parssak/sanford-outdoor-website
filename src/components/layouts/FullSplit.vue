@@ -1,7 +1,7 @@
 <template>
   <main class="lg:relative">
     <div
-      :class="`${leftClass} mx-auto max-w-7xl w-full pt-16 pb-20 lg:py-48 lg:flex ${
+      :class="`${leftClass} mx-auto max-w-7xl w-full pt-16 pb-20 lg:py-24 lg:flex ${
         flipped && 'justify-end'
       }
       `"

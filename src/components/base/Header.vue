@@ -6,10 +6,11 @@
         src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
         alt=""
       />
-      <div class="absolute inset-0 bg-accent mix-blend-multiply" aria-hidden="true" />
+      <!-- <div class="absolute inset-0  mix-blend-multiply" aria-hidden="true" /> -->
     </div>
     <Container>
       <div class="py-8 md:py-0">
+        <h3 class="support-text">Sanford Outdoor</h3>
         <h1
           class="
             text-4xl

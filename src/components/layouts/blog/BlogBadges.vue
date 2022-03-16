@@ -2,12 +2,14 @@
   <Container>
     <div class="relative">
       <div>
-        <h3 v-if="supportText?.length > 0" class="support-text">{{ supportText }}</h3>
+        <div v-if="supportText?.length > 0" class="support-text text-sm">{{ supportText }}</div>
         <div class="flex justify-between items-center mb-4">
           <h2 class="mb-0">
             {{ title }}
           </h2>
-          <router-link class="btn btn-xl h-max" to="/blog"> View All Posts </router-link>
+          <div class="hidden sm:inline-block">
+            <router-link class="btn btn-xl h-max" to="/blog"> View All Posts </router-link>
+          </div>
         </div>
         <p>
           {{ description }}
@@ -17,12 +19,7 @@
         <div v-for="post in posts" :key="post.title">
           <div>
             <a :href="post.category.href" class="inline-block">
-              <span
-                :class="[
-                  post.category.color,
-                  'inline-flex items-center px-3 py-0.5 rounded text-sm ',
-                ]"
-              >
+              <span :class="[post.category.color, 'tag']">
                 {{ post.category.name }}
               </span>
             </a>
@@ -59,6 +56,9 @@
           </div> -->
         </div>
       </div>
+      <div class="grid place-items-center mt-12 sm:hidden">
+        <router-link class="btn btn-xl h-max" to="/blog"> View All Posts </router-link>
+      </div>
     </div>
   </Container>
 </template>
@@ -68,10 +68,10 @@ import Container from "@/components/layouts/Container";
 const defaultPosts = [
   {
     title: "Top 100 Billboard Placements",
-    href: "#",
+    href: "/blog",
     category: {
       name: "Article",
-      href: "#",
+      href: "/blog",
       color: "bg-accent text-white",
     },
     description:
@@ -80,7 +80,7 @@ const defaultPosts = [
     datetime: "2020-03-16",
     author: {
       name: "Paul York",
-      href: "#",
+      href: "/blog",
       imageUrl:
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
@@ -88,15 +88,15 @@ const defaultPosts = [
   },
   {
     title: "Top 100 Billboard Placements",
-    href: "#",
-    category: { name: "Video", href: "#", color: "bg-accent text-white" },
+    href: "/blog",
+    category: { name: "Video", href: "/blog", color: "bg-accent text-white" },
     description:
       "Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.",
     date: "Mar 10, 2020",
     datetime: "2020-03-10",
     author: {
       name: "Dessie Ryan",
-      href: "#",
+      href: "/blog",
       imageUrl:
         "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
@@ -104,10 +104,10 @@ const defaultPosts = [
   },
   {
     title: "Top 100 Billboard Placements",
-    href: "#",
+    href: "/blog",
     category: {
       name: "Case Study",
-      href: "#",
+      href: "/blog",
       color: "bg-accent text-white",
     },
     description:
@@ -116,7 +116,7 @@ const defaultPosts = [
     datetime: "2020-02-12",
     author: {
       name: "Easer Collins",
-      href: "#",
+      href: "/blog",
       imageUrl:
         "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },

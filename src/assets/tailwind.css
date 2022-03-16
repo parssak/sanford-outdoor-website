@@ -116,7 +116,7 @@ select {
 }
 
 .btn-lg {
-  @apply px-4 py-2 text-base rounded-md;
+  @appl y px-4 py-2 text-base rounded-md;
 }
 
 .btn-xl {
@@ -262,4 +262,8 @@ input.unstyled[type="number"] {
 .support-text-white {
   @apply text-base font-medium text-white mb-2;
   font-family: Nunito;
+}
+
+.tag {
+  @apply inline-flex items-center px-3 py-0.5 rounded text-sm;
 }

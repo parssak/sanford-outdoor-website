@@ -39,25 +39,12 @@
         <h3 class="support-text-white">What We Do</h3>
         <h2 class="-mt-1">Our Boards</h2>
         <div class="grid gap-8 lg:grid-cols-3 mt-2">
-          <div
-            class="
-              bg-white
-              py-6
-              max-w-xs
-              px-8
-              rounded-lg
-              md:rounded-2xl
-              space-y-2
-              flex flex-col
-              items-center
-            "
+          <BoardCard
             v-for="board in boards"
             :key="board.id"
-          >
-            <img src="@/assets/board.svg" alt="" class="w-10 h-10" />
-            <h3 class="text-black font-semibold text-xl">{{ board.title }}</h3>
-            <p class="text-black text-center">{{ board.description }}</p>
-          </div>
+            :title="board.title"
+            :description="board.description"
+          />
         </div>
         <router-link to="/boards" class="btn btn-xl btn-light mt-12">View All Boards</router-link>
       </div>
@@ -66,7 +53,7 @@
 
   <!-- Container -->
   <Container>
-    <h3>Real World Results</h3>
+    <h3 class="support-text">Real World Results</h3>
     <h2>View our work</h2>
     <div class="grid place-items-center p-48">
       <div class="todo">Figure out how to do carousel</div>
@@ -74,12 +61,11 @@
   </Container>
 
   <!-- BlogBadges -->
-  <BlogBadges
-   supportText="Latest News"
-   title="Recent Blog Posts" />
+  <BlogBadges supportText="Latest News" title="Recent Blog Posts" />
 </template>
 
 <script>
+import BoardCard from "../../components/BoardCard.vue";
 import Header from "@/components/base/Header";
 import HeroImageCard from "@/components/layouts/hero/HeroImageCard.vue";
 import Split from "@/components/layouts/Split.vue";
@@ -114,6 +100,7 @@ export default {
     Split,
     Container,
     BlogBadges,
+    BoardCard,
   },
   data() {
     return {

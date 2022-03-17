@@ -4,7 +4,7 @@
     <div class="max-w-7xl mx-auto py-12 pb-8 px-4 sm:px-6 lg:px-8 border-t-2 mt-8 border-grey">
       <div class="grid lg:grid-cols-2 gap-8">
         <router-link to="/">
-          <img class="h-9 w-auto" src="@/assets/logo.svg" alt="Company Name" />
+          <img class="h-9 w-auto" src="@/assets/logo.svg" alt="Sanford Outdoor" />
         </router-link>
         <div class="grid sm:grid-cols-2 gap-8">
           <div>

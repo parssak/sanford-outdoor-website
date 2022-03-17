@@ -49,7 +49,7 @@ ul:not(.unstyled) {
 }
 
 ul:not(.unstyled) li {
-  @apply pl-4 text-black;
+  @apply pl-4 text-grey;
 }
 
 ul:not(.unstyled) li::before {

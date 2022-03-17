@@ -1,6 +1,6 @@
 <template>
   <Container :class="dark && 'bg-accent-dark'">
-    <div class="grid gap-x-8 gap-y-12 lg:grid-cols-2">
+    <div class="grid gap-x-8 gap-y-12 lg:grid-cols-2 lg:gap-x-12">
       <section :class="flip && `lg:order-1`" class="lg:py-12">
         <h3 class="support-text" v-if="supportText.length > 0">{{ supportText }}</h3>
         <h2 :class="dark && 'text-white'" v-html="title"></h2>

@@ -8,19 +8,19 @@
         </router-link>
         <div class="grid sm:grid-cols-2 gap-8">
           <div>
-            <h3 class="mb-3 footer-heading">Navigation</h3>
+            <h3 class="mb-3 text-lg font-semibold tracking-wide">Navigation</h3>
             <div class="space-y-1">
               <router-link
                 v-for="route in navigation"
                 :key="route.label"
-                class="block with-underline w-max transition hover:text-accent capitalize"
+                class="block with-underline w-max transition hover:text-accent capitalize text-grey"
                 :to="route.path"
                 >{{ route.label }}</router-link
               >
             </div>
           </div>
           <div>
-            <h3 class="mb-3 text-base font-semibold">Contact Us</h3>
+            <h3 class="mb-3 text-lg font-semibold tracking-wide">Contact Us</h3>
             <div class="space-y-2">
               <address class="not-italic text-grey">
                 700 Third Line, Suite 136 <br />
@@ -41,7 +41,7 @@
         </div>
       </div>
       <div class="mt-8 pt-8 md:flex md:items-center md:justify-between">
-        <p class="text-base text-grey">&copy; 2022 Sanford Outdoor, All rights reserved.</p>
+        <p class="text-base text-grey-dark">&copy; 2022 Sanford Outdoor, All rights reserved.</p>
       </div>
     </div>
   </footer>

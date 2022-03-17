@@ -4,7 +4,7 @@
   <div class="md:py-28">
     <FullSplit
       :flipped="true"
-      rightClass="h-full max-w-lg mx-auto lg:max-w-full rounded-xl lg:rounded-none lg:rounded-r-3xl overflow-hidden"
+      rightClass="h-full max-w-lg mx-auto lg:max-w-full lg:rounded-none lg:rounded-r-3xl overflow-hidden"
       leftClass="md:pl-12"
     >
       <template v-slot:left>

@@ -39,7 +39,7 @@
         to="#"
         class="uppercase tracking-wider text-sm flex items-center hover:text-accent"
       >
-        <ArrowLeftIcon class="w-4 h-4 mr-2" />
+        <ArrowNarrowLeftIcon class="w-4 h-4 mr-2" />
         PREVIOUS
       </router-link>
       <router-link
@@ -47,7 +47,7 @@
         class="uppercase tracking-wider text-sm flex items-center hover:text-accent"
       >
         NEXT
-        <ArrowRightIcon class="w-4 h-4 ml-2" />
+        <ArrowNarrowRightIcon class="w-4 h-4 ml-2" />
       </router-link>
     </div>
   </Container>
@@ -55,7 +55,7 @@
 
 <script>
 import Container from "@/components/layouts/Container.vue";
-import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/vue/outline";
+import { ArrowNarrowRightIcon, ArrowNarrowLeftIcon } from "@heroicons/vue/outline";
 const defaultPost = {
   title: "Blog Title Headline",
   href: "/blog/details",
@@ -77,7 +77,7 @@ const defaultPost = {
   readingTime: "6 min",
 };
 export default {
-  components: { Container, ArrowRightIcon, ArrowLeftIcon },
+  components: { Container, ArrowNarrowRightIcon, ArrowNarrowLeftIcon },
   props: {
     post: {
       type: Object,

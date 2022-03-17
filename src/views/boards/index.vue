@@ -18,8 +18,83 @@
   <!-- Container -->
   <Container>
     <h3 class="support-text">Our Work</h3>
-    <h2>Get Inspired</h2>
-    <div class="todo">Carousel</div>
+    <h2 class="mb-4">Get Inspired</h2>
+    <p class="text-grey mb-12">
+      Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet.
+    </p>
+    <div class="snap-x space-x-4 flex overflow-auto pb-2">
+      <div
+        class="
+          overflow-hidden
+          w-full
+          md:w-3/4
+          max-w-6xl
+          snap-center
+          md:h-full
+          flex-shrink-0
+          object-cover
+        "
+      >
+        <img src="@/assets/red-board.png" alt="" class="w-full h-full object-cover" />
+      </div>
+      <div
+        class="
+          overflow-hidden
+          w-full
+          md:w-3/4
+          max-w-6xl
+          snap-center
+          md:h-full
+          flex-shrink-0
+          object-cover
+        "
+      >
+        <img src="@/assets/blog.png" alt="" class="w-full h-full object-cover" />
+      </div>
+      <div
+        class="
+          overflow-hidden
+          w-full
+          md:w-3/4
+          max-w-6xl
+          snap-center
+          md:h-full
+          flex-shrink-0
+          object-cover
+        "
+      >
+        <img src="@/assets/blog.png" alt="" class="w-full h-full object-cover" />
+      </div>
+      <div
+        class="
+          overflow-hidden
+          w-full
+          md:w-3/4
+          max-w-6xl
+          snap-center
+          md:h-full
+          flex-shrink-0
+          full
+          object
+        "
+      >
+        <img src="@/assets/red-board.png" alt="" class="w-full h-full object-cover" />
+      </div>
+      <div
+        class="
+          overflow-hidden
+          w-full
+          md:w-3/4
+          max-w-6xl
+          snap-center
+          md:h-full
+          flex-shrink-0
+          object-cover
+        "
+      >
+        <img src="@/assets/blog.png" alt="" class="w-full h-full object-cover" />
+      </div>
+    </div>
   </Container>
 </template>
 

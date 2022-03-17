@@ -10,8 +10,8 @@
           Elit sunt amet fugiat veniam occaecat fugiat aliqua.
         </p>
         <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-10">
-          <button class="btn btn-xl">View Boards</button>
-          <button class="btn btn-xl btn-light">Get in Touch</button>
+          <router-link to="/boards" class="btn btn-xl">View Boards</router-link>
+          <router-link to="/contact" class="btn btn-xl btn-light">Get in Touch</router-link>
         </div>
       </div>
     </template>
@@ -55,8 +55,78 @@
   <Container>
     <h3 class="support-text">Real World Results</h3>
     <h2>View our work</h2>
-    <div class="grid place-items-center p-48">
-      <div class="todo">Figure out how to do carousel</div>
+    <div class="snap-x space-x-4 flex overflow-auto pb-2">
+      <div
+        class="
+          overflow-hidden
+          w-full
+          md:w-3/4
+          max-w-6xl
+          snap-center
+          md:h-full
+          flex-shrink-0
+          object-cover
+        "
+      >
+        <img src="@/assets/red-board.png" alt="" class="w-full h-full object-cover" />
+      </div>
+      <div
+        class="
+          overflow-hidden
+          w-full
+          md:w-3/4
+          max-w-6xl
+          snap-center
+          md:h-full
+          flex-shrink-0
+          object-cover
+        "
+      >
+        <img src="@/assets/blog.png" alt="" class="w-full h-full object-cover" />
+      </div>
+      <div
+        class="
+          overflow-hidden
+          w-full
+          md:w-3/4
+          max-w-6xl
+          snap-center
+          md:h-full
+          flex-shrink-0
+          object-cover
+        "
+      >
+        <img src="@/assets/blog.png" alt="" class="w-full h-full object-cover" />
+      </div>
+      <div
+        class="
+          overflow-hidden
+          w-full
+          md:w-3/4
+          max-w-6xl
+          snap-center
+          md:h-full
+          flex-shrink-0
+          full
+          object
+        "
+      >
+        <img src="@/assets/red-board.png" alt="" class="w-full h-full object-cover" />
+      </div>
+      <div
+        class="
+          overflow-hidden
+          w-full
+          md:w-3/4
+          max-w-6xl
+          snap-center
+          md:h-full
+          flex-shrink-0
+          object-cover
+        "
+      >
+        <img src="@/assets/blog.png" alt="" class="w-full h-full object-cover" />
+      </div>
     </div>
   </Container>
 

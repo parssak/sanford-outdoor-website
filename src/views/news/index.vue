@@ -21,11 +21,12 @@
         </router-link>
       </router-link>
     </div>
-    <div class="todo mt-8">Pagination</div>
+    <Pagination class="mt-8" />
   </Container>
 </template>
 
 <script>
+import Pagination from "../../components/nav/Pagination.vue";
 import Container from "../../components/layouts/Container.vue";
 import Header from "@/components/base/Header";
 import BlogSignUp from "@/components/layouts/blog/BlogSignUp.vue";
@@ -112,6 +113,7 @@ export default {
     BlogSignUp,
     Container,
     ArrowRightIcon,
+    Pagination,
   },
   data() {
     return {

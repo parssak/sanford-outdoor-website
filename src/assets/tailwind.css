@@ -92,7 +92,7 @@ select {
 .btn {
   @apply w-max inline-flex items-center border border-transparent shadow-sm transition
         text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-2 
-        focus:ring-offset-2 focus:ring-accent uppercase tracking-widest font-light;
+        focus:ring-offset-2 focus:ring-accent uppercase tracking-widest font-normal;
 }
 
 .btn-dark {
@@ -101,6 +101,10 @@ select {
 
 .btn-light {
   @apply text-accent bg-accent-light hover:bg-accent-light_hover;
+}
+
+.btn-outline {
+  @apply text-white bg-transparent border-accent;
 }
 
 .btn-xs {
@@ -160,7 +164,7 @@ select {
 }
 
 nav a {
-  @apply text-white transition;
+  @apply text-grey transition uppercase tracking-widest text-sm;
 }
 
 nav a:hover {
@@ -172,11 +176,15 @@ nav .router-link-active:not(.no-show-active) {
 }
 
 nav .router-link-active:not(.no-show-active).nav-item-mobile {
-  @apply bg-accent;
+  @apply bg-accent text-white;
+}
+
+nav .router-link-active:not(.no-show-active):not(.nav-item-mobile) {
+  @apply text-white;
 }
 
 nav .router-link-active:not(.no-show-active):not(.nav-item-mobile)::before {
-  @apply bg-accent-light;
+  @apply bg-white;
   content: " ";
   position: absolute;
   bottom: 0;

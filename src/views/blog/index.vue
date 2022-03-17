@@ -15,11 +15,12 @@
         <p class="text-grey text-base">{{ post.description }}</p>
       </router-link>
     </div>
-    <div class="todo mt-8">Pagination</div>
+    <Pagination class="mt-8" />
   </Container>
 </template>
 
 <script>
+import Pagination from "../../components/nav/Pagination.vue";
 import Container from "../../components/layouts/Container.vue";
 import Header from "@/components/base/Header";
 // import BlogThreeColumnCards from "@/components/layouts/blog/BlogThreeColumnCards.vue";
@@ -135,6 +136,7 @@ export default {
   components: {
     Header,
     Container,
+    Pagination,
   },
   data() {
     return {

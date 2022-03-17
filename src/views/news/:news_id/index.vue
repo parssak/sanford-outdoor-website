@@ -33,13 +33,19 @@
       </p>
     </article>
     <div class="flex items-center justify-between text-grey mt-12">
-      <router-link to="#" class="uppercase tracking-wider text-sm flex items-center hover:text-accent">
-        <ArrowLeftIcon class="w-4 h-4 mr-2" />
+      <router-link
+        to="#"
+        class="uppercase tracking-wider text-sm flex items-center hover:text-accent"
+      >
+        <ArrowNarrowLeftIcon class="w-4 h-4 mr-2" />
         PREVIOUS
       </router-link>
-      <router-link to="#" class="uppercase tracking-wider text-sm flex items-center hover:text-accent">
+      <router-link
+        to="#"
+        class="uppercase tracking-wider text-sm flex items-center hover:text-accent"
+      >
         NEXT
-        <ArrowRightIcon class="w-4 h-4 ml-2" />
+        <ArrowNarrowRightIcon class="w-4 h-4 ml-2" />
       </router-link>
     </div>
   </Container>
@@ -50,15 +56,15 @@ import Container from "../../../components/layouts/Container.vue";
 import Header from "@/components/base/Header";
 import BlogContent from "@/components/layouts/blog/BlogContent.vue";
 import { posts } from "@/data";
-import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/vue/outline";
+import { ArrowNarrowRightIcon, ArrowNarrowLeftIcon } from "@heroicons/vue/outline";
 
 export default {
   components: {
     Header,
     BlogContent,
     Container,
-    ArrowRightIcon,
-    ArrowLeftIcon,
+    ArrowNarrowRightIcon,
+    ArrowNarrowLeftIcon,
   },
   data() {
     return {

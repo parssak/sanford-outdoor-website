@@ -13,7 +13,7 @@
             capitalize
             whitespace-nowrap
             transition
-            text-white
+            text-grey
             hover:text-accent
             focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal,
           "
@@ -47,7 +47,6 @@
           <PopoverPanel
             class="
               absolute
-              right-0
               mt-3
               transform
               z-10
@@ -55,19 +54,30 @@
               w-screen
               max-w-sm
               sm:px-0
-              lg:ml-0 lg:left-1/2 lg:-translate-x-1/2
+              lg:ml-0
+              left-1/2
+              -translate-x-1/2
             "
           >
             <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-              <div class="relative grid gap-6 bg-white px-3 py-4 sm:gap-8 ">
+              <div class="relative grid gap-6 bg-black px-3 py-4 sm:gap-8">
                 <PopoverButton>
                   <router-link
                     v-for="item in dropdownItems"
                     :key="item.label"
                     :to="item.path"
-                    class="p-3 flex items-start rounded-lg transition hover:bg-gray-50"
+                    class="p-3 flex items-start rounded-lg transition hover:bg-white group"
                   >
-                    <p class="text-sm lg:text-base font-medium capitalize text-gray-900">
+                    <p
+                      class="
+                        text-sm
+                        lg:text-base
+                        font-medium
+                        capitalize
+                        text-white
+                        group-hover:text-black
+                      "
+                    >
                       {{ item.label }}
                     </p>
                   </router-link>

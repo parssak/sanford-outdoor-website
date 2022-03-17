@@ -1,24 +1,12 @@
 <template>
   <Popover class="fixed left-0 w-full top-0 z-20 bg-dark shadow">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div
-        class="
-          flex
-          justify-between
-          items-center
-          py-6
-          md:justify-start md:space-x-5
-        "
-      >
-        <div class="flex justify-start lg:w-0 flex-1">
+      <div class="flex justify-between items-center py-6 md:justify-start">
+        <div class="flex justify-start flex-shrink-0">
           <router-link to="/">
             <span class="sr-only">Sanford Outdoor</span>
             <div class="flex items-center">
-              <img
-                class="h-9 w-auto"
-                src="@/assets/logo.svg"
-                alt="Sanford Outdoor"
-              />
+              <img class="h-9 w-auto" src="@/assets/logo.svg" alt="Sanford Outdoor" />
             </div>
           </router-link>
         </div>
@@ -30,8 +18,8 @@
               inline-flex
               items-center
               justify-center
-              text-white
-              hover:text-gray-50
+              text-grey
+              hover:text-white
               transition
               hover:bg-white
             "
@@ -40,7 +28,8 @@
             <MenuIcon class="h-6 w-6 text-accent" aria-hidden="true" />
           </PopoverButton>
         </div>
-        <PopoverGroup as="nav" class="hidden md:flex space-x-6 xl:space-x-7">
+
+        <PopoverGroup as="nav" class="hidden md:flex space-x-6 xl:space-x-7 ml-auto lg:mx-auto">
           <NavItem
             v-for="item in navigation"
             :path="item.path"
@@ -50,6 +39,9 @@
             {{ item.label }}
           </NavItem>
         </PopoverGroup>
+        <div class="text-white hidden lg:block">
+          <a href="tel:+1-800-492-3451" class="btn btn-xl btn-outline">+1-800-492-3451</a>
+        </div>
       </div>
     </div>
 
@@ -63,17 +55,7 @@
     >
       <PopoverPanel
         focus
-        class="
-          absolute
-          top-0
-          inset-x-0
-          z-10
-          p-2
-          transition
-          transform
-          origin-top-right
-          md:hidden
-        "
+        class="absolute top-0 inset-x-0 z-10 p-2 transition transform origin-top-right md:hidden"
       >
         <div
           class="
@@ -87,11 +69,7 @@
           <div class="pt-5 pb-6 px-5">
             <div class="flex items-center justify-between">
               <router-link to="/">
-                <img
-                  class="h-7 w-auto"
-                  src="@/assets/logo.svg"
-                  alt="Sanford Outdoor"
-                />
+                <img class="h-7 w-auto" src="@/assets/logo.svg" alt="Sanford Outdoor" />
               </router-link>
               <div class="-mr-2">
                 <PopoverButton
@@ -134,12 +112,7 @@
 
 <script>
 import NavItem from "@/components/nav/NavItem.vue";
-import {
-  Popover,
-  PopoverButton,
-  PopoverGroup,
-  PopoverPanel,
-} from "@headlessui/vue";
+import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from "@headlessui/vue";
 import { MenuIcon, XIcon } from "@heroicons/vue/outline";
 import { navigation } from "@/data";
 

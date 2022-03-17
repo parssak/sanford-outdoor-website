@@ -1,5 +1,5 @@
 <template>
-  <Header title="contact" />
+  <Header title="contact us" />
 
   <FullSplit rightClass="h-full">
     <template v-slot:left>

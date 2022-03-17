@@ -7,7 +7,7 @@ const MASTER_ROUTES = [
     path: "/",
     label: "home",
     component: () => import("@/views/home"),
-    hidden: false,
+    hidden: true,
   },
   {
     path: "/about",

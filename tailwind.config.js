@@ -19,7 +19,10 @@ module.exports = {
           light_hover: "#efefef",
           lightest: "#fafafa",
         },
-        grey: '#ADACAC',
+        grey: {
+          dark: "#616161",
+          DEFAULT: "#ADACAC",
+        },
       },
     },
   },

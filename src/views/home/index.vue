@@ -1,5 +1,4 @@
 <template>
-  <h1>That was a test</h1> 
   <HeroImageCard>
     <template v-slot:title>
       <div class="max-w-3xl mx-auto flex flex-col items-center">

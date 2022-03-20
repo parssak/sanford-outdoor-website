@@ -16,7 +16,11 @@
   </Container>
 
   <!-- Container -->
-  <Container>
+  <Carousel
+    title="Get inspired"
+    description="Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet."
+  />
+  <!-- <Container>
     <h3 class="support-text">Our Work</h3>
     <h2 class="mb-4">Get Inspired</h2>
     <p class="text-grey mb-12">
@@ -95,10 +99,11 @@
         <img src="@/assets/blog.png" alt="" class="w-full h-full object-cover" />
       </div>
     </div>
-  </Container>
+  </Container> -->
 </template>
 
 <script>
+import Carousel from "../../components/layouts/features/Carousel.vue";
 import BoardCard from "../../components/BoardCard.vue";
 import Header from "@/components/base/Header";
 import Container from "@/components/layouts/Container.vue";
@@ -164,6 +169,7 @@ export default {
     Header,
     Container,
     BoardCard,
+    Carousel,
   },
   data() {
     return {

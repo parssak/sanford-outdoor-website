@@ -51,90 +51,14 @@
     </Container>
   </div>
 
-  <!-- Container -->
-  <Container>
-    <h3 class="support-text">Real World Results</h3>
-    <h2>View our work</h2>
-    <div class="snap-x space-x-4 flex overflow-auto pb-2">
-      <div
-        class="
-          overflow-hidden
-          w-full
-          md:w-3/4
-          max-w-6xl
-          snap-center
-          md:h-full
-          flex-shrink-0
-          object-cover
-        "
-      >
-        <img src="@/assets/red-board.png" alt="" class="w-full h-full object-cover" />
-      </div>
-      <div
-        class="
-          overflow-hidden
-          w-full
-          md:w-3/4
-          max-w-6xl
-          snap-center
-          md:h-full
-          flex-shrink-0
-          object-cover
-        "
-      >
-        <img src="@/assets/blog.png" alt="" class="w-full h-full object-cover" />
-      </div>
-      <div
-        class="
-          overflow-hidden
-          w-full
-          md:w-3/4
-          max-w-6xl
-          snap-center
-          md:h-full
-          flex-shrink-0
-          object-cover
-        "
-      >
-        <img src="@/assets/blog.png" alt="" class="w-full h-full object-cover" />
-      </div>
-      <div
-        class="
-          overflow-hidden
-          w-full
-          md:w-3/4
-          max-w-6xl
-          snap-center
-          md:h-full
-          flex-shrink-0
-          full
-          object
-        "
-      >
-        <img src="@/assets/red-board.png" alt="" class="w-full h-full object-cover" />
-      </div>
-      <div
-        class="
-          overflow-hidden
-          w-full
-          md:w-3/4
-          max-w-6xl
-          snap-center
-          md:h-full
-          flex-shrink-0
-          object-cover
-        "
-      >
-        <img src="@/assets/blog.png" alt="" class="w-full h-full object-cover" />
-      </div>
-    </div>
-  </Container>
+  <Carousel title="View Our Work" />
 
   <!-- BlogBadges -->
   <BlogBadges supportText="Latest News" title="Recent Blog Posts" />
 </template>
 
 <script>
+import Carousel from "../../components/layouts/features/Carousel.vue";
 import BoardCard from "../../components/BoardCard.vue";
 import Header from "@/components/base/Header";
 import HeroImageCard from "@/components/layouts/hero/HeroImageCard.vue";
@@ -171,6 +95,7 @@ export default {
     Container,
     BlogBadges,
     BoardCard,
+    Carousel,
   },
   data() {
     return {

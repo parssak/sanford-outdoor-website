@@ -4,7 +4,17 @@
     <h2 class="mb-0">{{ title }}</h2>
     <p v-if="description.length > 0" class="mt-4">{{ description }}</p>
 
-    <div class="overflow-hidden w-full md:h-full flex-shrink-0 object-cover flex mt-12 ">
+    <div
+      class="
+        overflow-hidden
+        w-full
+        md:h-full
+        flex-shrink-0
+        object-cover
+        flex
+        mt-12
+      "
+    >
       <!-- Previous Image -->
       <div
         class="hidden sm:block w-full h-full absolute right-full object-cover bg-black"
